@@ -1,0 +1,49 @@
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0rem;
+  background-color: rgb(208, 191, 191);
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-family: "Belgrano", serif;
+  font-family: "Roboto Mono", monospace;
+}
+
+.about-image > img {
+  border-radius: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  height: 350px;
+  object-position: 20% 10%;
+  border: 2px solid white;
+  transform: rotate(40deg);
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 60vw; */
+  gap: 3vw;
+  max-width: 58rem;
+}
+.about-text-title {
+    font-size: 32px;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 800;
+    font-family: "Bebas Neue", sans-serif;
+  
+}
+
+.about-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.about-text-content {
+    line-height: 1.5;
+}

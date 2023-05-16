@@ -19,9 +19,9 @@ function Hero() {
         <div className="hero-text-container">
           <h1>Front-end developer</h1>
           <div className="hero-text-content">
-            I am Daniel,
+            I am Daniel Cohen,
             <br />
-            <div className="animated-text">a self taught web developer</div>
+            <div className="animated-text">a passionate web developer</div>
           </div>
           <div className="hero-skills-content">
             <div className="skill-wrapper">

@@ -3,28 +3,38 @@
   flex-direction: column;
   padding: 4rem 0rem;
   background-color: rgb(212, 212, 212);
-  height: 90vh;
+  height: 100vh;
   align-items: center;
   justify-content: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-family: "Belgrano", serif;
+  font-family: "Roboto Mono", monospace;
 }
 
 .hero-container {
   display: flex;
   gap: 3vw;
   justify-content: center;
+  max-width: 58rem;
 }
+h1 {
+  font-style: normal;
+  text-decoration: none;
+  font-weight: 800;
+  font-family: "Bebas Neue", sans-serif;
 
+}
 .hero-text-container {
-  font-size: 35px;
+  font-size: 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .animated-text {
-  animation: write-animation 2.5s steps(40, end),
-    blink-border 0.55s step-end infinite;
+  animation: write-animation 3.5s steps(40, end),
+    blink-border 0.75s step-end infinite;
   overflow: hidden;
   border-right: 0.15em solid rgb(157, 157, 157);
   white-space: nowrap;
@@ -42,7 +52,7 @@
 }
 
 @keyframes write-animation {
-  0% {
+  20% {
     width: 0%;
   }
   100% {
@@ -68,4 +78,5 @@
   font-size: 12px;
   text-align: center;
   gap: 0.2rem;
+  align-items: center;
 }
