@@ -5,7 +5,7 @@ import { SiGmail } from "react-icons/si"
 
 function Contact() {
   return (
-    <div className='contact-wrapper'>
+    <div className='contact-wrapper' id='contact-section'>
         <div className='contact-title'>Contact Me</div>
         <form className='contact-form'>
         <input type={'text'} placeholder='Name...' required name='name'></input>

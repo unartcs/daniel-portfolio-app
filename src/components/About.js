@@ -1,9 +1,11 @@
 import React from "react";
 import "../styles/About.css";
 import picture from "../images/profile2.jpg";
+
 function About() {
   return (
-    <div className="about-wrapper">
+    <div className="about-wrapper" id='about-section'>
+      
       <div className="about-container">
         <div className="about-image">
           <img src={picture} alt="about" />

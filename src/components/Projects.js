@@ -11,7 +11,7 @@ import {
 
 function Projects() {
   return (
-    <div className="projects-wrapper">
+    <div className="projects-wrapper"  id='projects-section'>
       <ul className="projects-grid-wrapper">
         {ProjectData.map((project) => {
           return (

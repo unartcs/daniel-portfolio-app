@@ -11,7 +11,7 @@ import "../styles/Hero.css";
 
 function Hero() {
   return (
-    <div className="hero-wrapper">
+    <div className="hero-wrapper"  id='home-section'>
       <div className="hero-container">
         <div className="hero-image">
           <img src={profile} alt="profile"></img>

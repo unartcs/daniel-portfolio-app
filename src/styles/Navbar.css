@@ -1,3 +1,7 @@
+:root {
+  --color01: rgb(0, 208, 255);
+}
+
 ul,
 a,
 a:hover,
@@ -8,16 +12,33 @@ a:link {
   padding: 0;
 }
 
+/* .navbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.5rem 12vw;
+  font-family: "Bebas Neue", cursive;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 100;
+} */
 .navbar-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 12vw;
+  padding: 0.5rem 2vw;
   font-family: "Bebas Neue", cursive;
-  /* font-family: "Belgrano", serif;
-  font-family: "Roboto Mono", monospace; */
+  position: fixed;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  overflow: hidden;
+  /* z-index: 100; */
+  background-color: rgba(0, 0, 0, 0.69);
+  color: aliceblue;
 }
-
 .navbar-ul {
   display: flex;
   gap: 5vw;
@@ -32,8 +53,16 @@ a:link {
 .navbar-socials-item:hover {
   cursor: pointer;
   animation: socials-item-anim 1s;
-
 }
+.cv-link {
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 200;
+}
+
 .socials-ul {
   display: flex;
   gap: 2vw;
@@ -52,22 +81,21 @@ a:link {
   0% {
     /* text-shadow: -5px -2px rgb(132, 132, 132); */
   }
-  10% {
-    text-shadow: 0px 5px rgb(216, 216, 216);
-  }
   15% {
-    text-shadow: 5px 5px rgb(216, 216, 216);
+    text-shadow: -5px 0px var(--color01);
+  }
+  25% {
+    text-shadow: -5px 0px var(--color01);
   }
 
-  20% {
-    text-shadow: 5px 0px rgb(216, 216, 216);
+  30% {
+    text-shadow: -5px 0px var(--color01);
   }
 
   25% {
-    text-shadow: 0px 0px 0px rgb(216, 216, 216);
+    /* text-shadow: 0px 0px 0px var(--color01); */
   }
   100% {
-    text-shadow: 0px 0px rgb(216, 216, 216);
-
+    /* text-shadow: 0px 0px var(--color01); */
   }
 }
