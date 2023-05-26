@@ -30,6 +30,7 @@ a:link {
   justify-content: space-between;
   padding: 0.5rem 2vw;
   font-family: "Bebas Neue", cursive;
+  font-family: 'Poppins', sans-serif;
   position: fixed;
   left: 0;
   width: 100%;
@@ -37,7 +38,9 @@ a:link {
   overflow: hidden;
   /* z-index: 100; */
   background-color: rgba(0, 0, 0, 0.69);
+  
   color: aliceblue;
+  z-index: 10;
 }
 .navbar-ul {
   display: flex;
@@ -54,7 +57,7 @@ a:link {
   cursor: pointer;
   animation: socials-item-anim 1s;
 }
-.cv-link {
+.cv-link > a {
   cursor: pointer;
   font-size: 24px;
   display: flex;

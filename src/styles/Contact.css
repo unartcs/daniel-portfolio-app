@@ -4,16 +4,24 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: rgb(175, 175, 175);
-  gap: 4rem;
+  background-color: rgb(220, 220, 220);
+  gap: 0rem;
   font-family: "Bebas Neue", cursive;
+  font-family: 'Poppins', sans-serif;
   /* font-family: "Belgrano", serif; */
   /* font-family: "Roboto Mono", monospace; */
+  background-image: url(../images/alexander-andrews-JYGnB9gTCls-unsplash.jpg);
+  /* background-position: 50%; */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .contact-title {
   font-size: 48px;
   font-weight: 900;
+  margin-top: auto;
+  margin-bottom: 3rem;
+
 }
 .contact-form {
   display: flex;
@@ -23,6 +31,8 @@
   font-family: "Belgrano", serif;
   font-family: "Roboto Mono", monospace;
   align-items: center;
+  /* margin-top: auto; */
+
 }
 .contact-form > input::placeholder,
 .contact-form > textarea::placeholder {
@@ -48,6 +58,9 @@
 .socials-wrapper {
   display: flex;
   gap: 5rem;
+  margin-top: auto;
+  padding-bottom: 2rem;
+
 }
 
 .socials-wrapper > *:hover {

@@ -2,13 +2,20 @@
   display: flex;
   flex-direction: column;
   padding: 4rem 0rem;
-  background-color: rgb(208, 191, 191);
+  /* background-color: rgb(196, 217, 255); */
+  /* background-color: rgb(156, 197, 255); */
+  background: linear-gradient( 90deg, rgba(32, 99, 194, 0.615) 20%, rgb(128, 168, 255, 0.5));
   height: 100vh;
   align-items: center;
   justify-content: center;
   font-family: "Bebas Neue", sans-serif;
   font-family: "Belgrano", serif;
   font-family: "Roboto Mono", monospace;
+  font-family: 'Poppins', sans-serif;
+  background-image: url(../images/modern-buildings.jpg);
+  /* background-position: 50%; */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .about-image > img {
@@ -19,6 +26,7 @@
   object-position: 20% 10%;
   border: 2px solid white;
   transform: rotate(40deg);
+  z-index: 0;
 }
 
 .about-container {
@@ -27,7 +35,11 @@
   justify-content: center;
   /* width: 60vw; */
   gap: 3vw;
-  max-width: 58rem;
+  max-width: 58vw;
+  /* background: linear-gradient( 90deg, rgba(32, 137, 194, 0.615) 20%, rgba(85, 186, 232, 0.5)); */
+  background-color: rgba(240, 248, 255, 0.759);
+  border-radius: 20px;
+  padding: 2rem;
 }
 .about-text-title {
     font-size: 32px;
@@ -35,6 +47,7 @@
     text-decoration: none;
     font-weight: 800;
     font-family: "Bebas Neue", sans-serif;
+    font-family: 'Poppins', sans-serif;
   
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import profile from "../images/profile.jpg";
 import htmlIcon from "../images/html.svg";
 import cssIcon from "../images/css.svg";
@@ -6,12 +6,19 @@ import jsIcon from "../images/js.svg";
 import reactIcon from "../images/icons8-react.svg";
 import gitIcon from "../images/icons8-github.svg";
 import "../styles/Hero.css";
+import {
+  motion,
+  useInView,
+  useAnimation,
+  AnimatePresence,
+  LayoutGroup,
+} from "framer-motion";
 
 // import { DiCss3, DiHtml5, DiReact, DiGit, DiJavascript } from "react-icons/di";
 
 function Hero() {
   return (
-    <div className="hero-wrapper"  id='home-section'>
+    <div className="hero-wrapper" id="home-section">
       <div className="hero-container">
         <div className="hero-image">
           <img src={profile} alt="profile"></img>
@@ -21,7 +28,19 @@ function Hero() {
           <div className="hero-text-content">
             I am Daniel Cohen,
             <br />
-            <div className="animated-text">a passionate web developer</div>
+            <motion.li
+              key={Math.floor(Math.random())}
+              variants={{
+                hidden: { width: '0%'},
+                visible: { width: '100%', animationTimingFunction: 'step-start'}
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 2, delay: 0, animationTimingFunction: 'step-start', repeat: ''}}
+              viewport={{once: false}}
+              className="animated-text">
+              a passionate web developer
+            </motion.li>
           </div>
           <div className="hero-skills-content">
             <div className="skill-wrapper">

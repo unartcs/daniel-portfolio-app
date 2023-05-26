@@ -25,6 +25,7 @@ function Projects() {
                 whileInView="visible"
                 transition={{ duration: 1.5, delay: 0.25 }}
                 viewport={{once: true}}
+      
                 className="projects-grid-box"
               >
                 <div className="grid-box-image-container">
@@ -39,9 +40,6 @@ function Projects() {
                   <a href={project.url} target="_blank">
                     <h1 className="grid-box-project-title">{project.name}</h1>
                   </a>
-                  <p className="grid-box-project-description">
-                    {project.description}
-                  </p>
                   <ul className="grid-box-project-tech-list">
                     {project.tech.map((item) => {
                       return (
@@ -49,6 +47,10 @@ function Projects() {
                       );
                     })}
                   </ul>
+                  <p className="grid-box-project-description">
+                    {project.description}
+                  </p>
+                  
                   <div className="grid-box-project-links">
                     <a href={project.url} target="_blank">
                       <span className="grid-box-project-url">Live Demo</span>
@@ -62,7 +64,9 @@ function Projects() {
                     ) : (
                       ""
                     )}
+                    
                   </div>
+                  
                 </div>
               </motion.li>
           );

@@ -2,13 +2,17 @@
   display: flex;
   flex-direction: column;
   padding: 6rem 4rem;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(11, 11, 11);
   height: 100vh;
   /* align-items: center; */
   justify-content: center;
   font-family: "Bebas Neue", sans-serif;
   font-family: "Belgrano", serif;
   font-family: "Roboto Mono", monospace;
+  background-image: url(../images/valery-sysoev-C3vDZehYiS0-unsplash.jpg);
+  /* background-position: 50%; */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .projects-grid-wrapper {
@@ -59,18 +63,17 @@ a:hover {
 
 .grid-box-project-description {
   font-size: 18px;
-  text-align: center;
 }
 
 .grid-box-text-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  /* gap: 1rem; */
   margin: 0;
   padding: 0;
   min-width: 10rem;
   width: 35rem;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
   align-items: center;
 }
@@ -80,11 +83,12 @@ a:hover {
   gap: 1rem;
   text-align: center;
   justify-content: center;
+  font-size: 12px;
 }
 
 .grid-box-project-tech-item {
   color: white;
-  padding: 0.5rem;
+  padding: 0.3rem;
   background-color: rgb(29, 30, 30);
   border-radius: 10px;
 }

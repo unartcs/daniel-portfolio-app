@@ -86,3 +86,19 @@ video {
   vertical-align: baseline;
   box-sizing: border-box;
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fefefe;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(65, 66, 66);
+}
