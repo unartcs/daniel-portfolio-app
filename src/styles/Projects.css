@@ -25,6 +25,7 @@
 
 .grid-box-image-container > a > img {
   height: 200px;
+  width: 350px;
   /* aspect-ratio: 1/1; */
   object-fit: cover;
   border-radius: 10px;
@@ -37,15 +38,14 @@
 .projects-grid-box {
   display: flex;
   flex-direction: row;
-  background-color: rgb(232, 232, 232);
+  background-color: rgba(255, 255, 255, 0.735);
   border-radius: 10px;
   padding: 1rem 1rem;
   gap: 2vh;
   /* align-items: center; */
-  box-shadow: 1px 0px 5px 0px rgba(212, 211, 211, 0.75);
--webkit-box-shadow: 1px 0px 5px 0px rgb(212, 211, 211, 0.75);
--moz-box-shadow: 1px 0px 5px 0px (212, 211, 211, 0.75);
-
+  box-shadow: 0px 0px 5px 0px rgba(225, 225, 225, 0.75);
+  -webkit-box-shadow: 0px 0px 20px 0px rgb(156, 57, 57);
+  -moz-box-shadow: 0px 0px 20px 0px rgb(156, 57, 57);
 }
 
 a,
@@ -111,4 +111,50 @@ h1 {
   padding: 0;
   margin: 0;
   width: 100%;
+}
+.grid-box-image-container {
+  float: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+
+}
+.hover-effect {
+  /* box-shadow: 0px 0px 5px 0px rgba(225, 225, 225, 0.75);
+  -webkit-box-shadow: 0px 0px 100px 0px rgba(225, 225, 225, 0.75);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(225, 225, 225, 0.75); */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  /* padding: 1rem; */
+  background-color: #fd0404a9;
+  color: white;
+  position: absolute;
+  left: -50%;
+}
+
+.hover-effect ~ a > img {
+  border-left: 5px solid #ff0000;
+  border-radius: 10px;
+  z-index: 2;
+}
+.hover-effect::after {
+  background-color: #ff0808;
+  position: absolute;
+  width: 101px;
+  height: 2px;
+  content: '';
+  right: -100%;
+  z-index: -1;
+}
+
+.grid-box-project-links > a:hover >span {
+  transition: 0.2s linear;
+  background-color: rgb(226, 58, 58);
 }

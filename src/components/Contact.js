@@ -38,7 +38,7 @@ function Contact() {
         ></input>
         <input
           type={"number"}
-          placeholder="Phone Number..."
+          placeholder="Phone Number... (Optional)"
           name="number"
           id="number"
           value={number}
