@@ -93,17 +93,49 @@ input[type="number"] {
   border-radius: 20px;
   padding: 1rem 1rem;
   font-size: 20px;
-  background-color: black;
   color: white;
   /* font-family: "Bebas Neue", cursive; */
   font-family: "Belgrano", serif;
   /* font-family: "Roboto Mono", monospace; */
   width: 100px;
   cursor: pointer;
+  background: linear-gradient(0deg, white 50%, black 50%);
+  border: 2px solid black;
+  background-size: 200% 200%;
+  background-position: 100% 0%;
+  animation: buttongradientOut 0.521s ;
 }
 
 .contact-button:hover {
-    border: 2px solid white;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    /* border: 2px solid white; */
+    transition: 0.5s linear;
+    /* background-color: rgb(255, 255, 255); */
+    background: linear-gradient(0deg, white 50%, black 50%);
+    border: 2px solid black;
+    animation: buttongradientIn 0.5s;
+    background-size: 200% 200%;
+    background-position: 0% 100%;
+    color: black;
+}
+
+@keyframes buttongradientIn {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+@keyframes buttongradientOut {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+input:focus, textarea:focus {
+  background-color: rgb(200,200, 200);
 }
