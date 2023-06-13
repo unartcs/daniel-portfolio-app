@@ -30,7 +30,7 @@ a:link {
   justify-content: space-between;
   padding: 0.5rem 2vw;
   font-family: "Bebas Neue", cursive;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   position: fixed;
   left: 0;
   width: 100%;
@@ -38,16 +38,24 @@ a:link {
   overflow: hidden;
   /* z-index: 100; */
   background-color: rgba(0, 0, 0, 0.69);
-  
   color: aliceblue;
   z-index: 10;
+  animation: navbarSlideIn 0.5s;
+  height: 5rem;
 }
 .navbar-ul {
   display: flex;
   gap: 5vw;
   font-size: 32px;
-}
+  animation: textFadeIn 1s;  
 
+}
+.navbar-ul-item {
+  /* animation: textFadeIn 1s; */
+  
+  transform: translateY(0);
+  
+}
 .navbar-ul-item:hover {
   cursor: pointer;
   /* text-shadow: 5px 1px rgb(61, 61, 255); */
@@ -55,6 +63,7 @@ a:link {
 }
 .navbar-socials-item:hover {
   cursor: pointer;
+  transform: translateY(0);
   animation: socials-item-anim 1s;
 }
 .cv-link > a {
@@ -64,14 +73,121 @@ a:link {
   align-items: center;
   gap: 0.5rem;
   z-index: 200;
+  animation: textFadeIn 1s;
 }
+.cv-link {
+  animation: textFadeIn 1s;  
 
+}
 .socials-ul {
   display: flex;
   gap: 2vw;
   align-items: center;
   justify-content: center;
 }
+@keyframes navbarSlideIn {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes navbarSlideOut {
+  0% {
+    width: 100%;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.69);
+  }
+  100% {
+    width: 5rem;
+    visibility: collapse;
+    background-color: rgba(0, 0, 0, 0.00);
+  }
+}
+
+@keyframes navbarSlideInHori {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@keyframes navbarSlideOutHori {
+  0% {
+    height: 100%;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.69);
+  }
+  100% {
+    height: 5rem;
+    visibility: collapse;
+    background-color: rgba(0, 0, 0, 0.00);
+  }
+}
+@keyframes textFadeIn {
+  0% {
+    transform: translateY(-120px);
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: none;
+  }
+  100% {
+    transform: translateY(0);
+    display: block;
+    opacity: 100%;
+  }
+}
+
+@keyframes textFadeOut {
+  100% {
+    transform: translateY(-110px);
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: none;
+  }
+  0% {
+    transform: translateY(0);
+    display: block;
+    opacity: 100%;
+  }
+}
+@keyframes textFadeInHori {
+  0% {
+    transform: translateX(-120px);
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: none;
+  }
+  100% {
+    transform: translateX(0);
+    display: block;
+    opacity: 100%;
+  }
+}
+@keyframes textFadeOutHori {
+  100% {
+    transform: translateX(-110px);
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: none;
+  }
+  0% {
+    transform: translateX(0);
+    display: block;
+    opacity: 100%;
+  }
+}
+
 @keyframes socials-item-anim {
   0% {
     transform: rotate(0deg);
@@ -82,23 +198,175 @@ a:link {
 }
 @keyframes menu-item-anim {
   0% {
+    transform: translateY(0);
     /* text-shadow: -5px -2px rgb(132, 132, 132); */
   }
   15% {
     text-shadow: -5px 0px var(--color01);
+    transform: translateY(0);
   }
   25% {
     text-shadow: -5px 0px var(--color01);
+    transform: translateY(0);
   }
 
   30% {
     text-shadow: -5px 0px var(--color01);
+    transform: translateY(0);
   }
 
   25% {
+    transform: translateY(0);
     /* text-shadow: 0px 0px 0px var(--color01); */
   }
   100% {
+    transform: translateY(0);
     /* text-shadow: 0px 0px var(--color01); */
   }
 }
+.hamburger-button {
+  cursor: pointer;
+  width: fit-content;
+  animation: 0.5s burgerAnimationOut ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-button:hover {
+  animation: 0.5s burgerAnimationIn ease-in-out;
+  scale: 1.3;
+}
+@keyframes burgerAnimationIn {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.3;
+  }
+}
+
+@keyframes burgerAnimationOut {
+  0% {
+    scale: 1.3;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.navbar-wrapper-close {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2vw;
+  font-family: "Bebas Neue", cursive;
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  left: 0;
+  width: 5rem;
+  /* height: 100%; */
+  overflow: hidden;
+  /* z-index: 100; */
+  /* background-color: rgba(0, 0, 0, 0.69); */
+  color: aliceblue;
+  z-index: 10;
+  height: 5rem;
+  animation: navbarSlideOut 1s;
+}
+
+.navbar-title {
+  font-family: "Bebas Neue", cursive;
+  font-size: 36px;
+  animation: textFadeIn 1s;
+  align-self: center;
+}
+
+.navbar-title > span {
+  color: rgb(22, 131, 178);
+}
+
+
+.close {
+  animation: textFadeOut 1s;  
+}
+
+.hide {
+  visibility: collapse;
+}
+@media (width < 1180px) {
+  .navbar-wrapper {
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+    position: fixed;
+    left: 0;
+    width: 10rem;
+    height: 100%;
+    padding: 2rem 0;
+    justify-content: center;
+    gap: 8rem;
+    text-align: center;
+    animation: navbarSlideInHori 1s;
+  }
+  .navbar-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+    font-size: 32px;
+    animation: textFadeInHori 1s;  
+  
+  }
+  .socials-ul {
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .hamburger-button {
+    text-align: center;
+    display: flex;
+    display: block;
+    align-self: center;
+    justify-content: center;
+  }
+  .navbar-title {
+    /* transform: rotate(90deg); */
+  }
+  .navbar-wrapper-close {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 0rem;
+    font-family: "Bebas Neue", cursive;
+    font-family: "Poppins", sans-serif;
+    position: fixed;
+    left: 0;
+    width: 10rem;
+    /* height: 100%; */
+    overflow: hidden;
+    /* z-index: 100; */
+    /* background-color: rgba(0, 0, 0, 0.69); */
+    color: aliceblue;
+    z-index: 10;
+    height: 5rem;
+    animation: navbarSlideOutHori 1s;
+  }
+  .close {
+    animation: textFadeOutHori 1s;  
+  }
+}
+
+
+/* .open1 {
+  animation: textFadeIn 1s;  
+} 
+.open2 {
+  animation: textFadeIn 1.5s;  
+}
+.open3 {
+  animation: textFadeIn 2s;  
+}
+.open4 {
+  animation: textFadeIn 2.5s;  
+} */
+

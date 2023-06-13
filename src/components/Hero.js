@@ -5,6 +5,7 @@ import cssIcon from "../images/css.svg";
 import jsIcon from "../images/js.svg";
 import reactIcon from "../images/icons8-react.svg";
 import gitIcon from "../images/icons8-github.svg";
+import tailwindIcon from '../images/icons8-tailwind-css-480.png'
 import "../styles/Hero.css";
 import {
   motion,
@@ -62,6 +63,11 @@ function Hero() {
               {/* <DiReact size={50}  color='cyan'/> */}
               <img src={reactIcon} alt="React" height={"50px"} />
               React
+            </div>
+            <div className="skill-wrapper">
+              {/* <DiReact size={50}  color='cyan'/> */}
+              <img src={tailwindIcon} alt="Tailwind" height={"50px"} />
+              Tailwind
             </div>
             <div className="skill-wrapper">
               {/* <DiGit size={50}/> */}

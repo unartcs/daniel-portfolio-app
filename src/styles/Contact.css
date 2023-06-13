@@ -7,7 +7,7 @@
   background-color: rgb(220, 220, 220);
   gap: 0rem;
   font-family: "Bebas Neue", cursive;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   /* font-family: "Belgrano", serif; */
   /* font-family: "Roboto Mono", monospace; */
   background-image: url(../images/jeshoots-com-pUAM5hPaCRI-unsplash.jpg);
@@ -21,7 +21,6 @@
   font-weight: 900;
   margin-top: auto;
   margin-bottom: 3rem;
-
 }
 .contact-form {
   display: flex;
@@ -32,7 +31,6 @@
   font-family: "Roboto Mono", monospace;
   align-items: center;
   /* margin-top: auto; */
-
 }
 .contact-form > input::placeholder,
 .contact-form > textarea::placeholder {
@@ -60,7 +58,6 @@
   gap: 5rem;
   margin-top: auto;
   padding-bottom: 2rem;
-
 }
 
 .socials-wrapper > *:hover {
@@ -103,19 +100,19 @@ input[type="number"] {
   border: 2px solid black;
   background-size: 200% 200%;
   background-position: 100% 0%;
-  animation: buttongradientOut 0.521s ;
+  animation: buttongradientOut 0.521s;
 }
 
 .contact-button:hover {
-    /* border: 2px solid white; */
-    transition: 0.5s linear;
-    /* background-color: rgb(255, 255, 255); */
-    background: linear-gradient(0deg, white 50%, black 50%);
-    border: 2px solid black;
-    animation: buttongradientIn 0.5s;
-    background-size: 200% 200%;
-    background-position: 0% 100%;
-    color: black;
+  /* border: 2px solid white; */
+  transition: 0.5s linear;
+  /* background-color: rgb(255, 255, 255); */
+  background: linear-gradient(0deg, white 50%, black 50%);
+  border: 2px solid black;
+  animation: buttongradientIn 0.5s;
+  background-size: 200% 200%;
+  background-position: 0% 100%;
+  color: black;
 }
 
 @keyframes buttongradientIn {
@@ -136,6 +133,21 @@ input[type="number"] {
   }
 }
 
-input:focus, textarea:focus {
-  background-color: rgb(200,200, 200);
+input:focus,
+textarea:focus {
+  background-color: rgb(200, 200, 200);
+}
+
+@media (width < 470px) {
+  .contact-form > input,
+  .contact-form > textarea {
+    width: 240px;
+    font-size: 14px;
+  }
+  .socials-wrapper {
+    gap: 1rem;
+  }
+  .contact-title {
+    font-size: 36px;
+  }
 }

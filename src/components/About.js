@@ -4,6 +4,8 @@ import picture from "../images/profile2.jpg";
 import { motion } from "framer-motion";
 import moment from "moment";
 import { now } from "moment";
+import { Link } from "react-scroll";
+
 function About() {
   // const getDate = () => {
   //   let startMonth = 7
@@ -48,21 +50,34 @@ function About() {
         <div className="about-text-wrapper">
           <div className="about-text-title">About Me</div>
           <div className="about-text-content">
-            I am a Front-End Developer with an arsenal of skills - HTML, CSS,
-            JavaScript, React.
-            <br />I have started my journey {getYear}
+            I am an ambitious Front-End Developer with a set of skills:
             <br />
-            My passion is working on projects and watch how mockups transforms
-            into a functional and beautiful websites.
+            <span>HTML, CSS, JavaScript, React and Tailwind.</span>
+            <br />
+            Web development is my <span>passion</span> and is my <span>dream</span> career.
+            <br/>
+            I <span>love</span> working on{" "}
+            <Link
+              activeClass="active"
+              to="projects-section"
+              spy={true}
+              smooth={true}
+              hashSpy={true}
+              offset={0}
+              duration={500}
+              delay={200}
+              isDynamic={true}
+              ignoreCancelEvents={false}
+              spyThrottle={500}
+            >
+              <span className="about-text-content-span">projects</span>
+            </Link>{" "}
+            and see how a mockup transform into a beautiful website or application.
             <br />I am self-taught so I am capable of accquiring new skills
-            easily and quickly.
+            quickly and easily.
             <br />
             Sometimes I can work on a project for 12 hours straight without
             noticing how the time flew by - thats how I know I love what I do.
-            <br />I was born and raised in Israel, and moved to Denmark to be
-            with my loved one.
-            <br />I am fluent in English and Hebrew, I know a little bit of
-            Danish.
           </div>
         </div>
       </div>
